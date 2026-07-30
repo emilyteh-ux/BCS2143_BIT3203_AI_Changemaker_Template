@@ -3,4 +3,4 @@
 - Video title:
 - Approved link:
 - Duration:
-- Student's own voice used: Yes / No
+- Student's own voice used: Yes
