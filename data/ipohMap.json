@@ -1,0 +1,147 @@
+{
+  "description": "Simulated urban pedestrian map of Ipoh City Center (Old Town & New Town) for the SafeRoute.AI Navigation System.",
+  "nodes": {
+    "ipoh_railway_station":   {"name": "Ipoh Railway Station",              "x": 0,   "y": 0,   "is_safe_haven": true},
+    "birch_clock_tower":      {"name": "Birch Memorial Clock Tower",        "x": 25,  "y": 15,  "is_safe_haven": false},
+    "padang_ipoh":            {"name": "Padang Ipoh",                       "x": 35,  "y": 40,  "is_safe_haven": false},
+    "central_police_station": {"name": "Ipoh District Police Headquarters", "x": 40,  "y": -20, "is_safe_haven": true},
+    "concubine_lane":         {"name": "Concubine Lane",                    "x": 50,  "y": 20,  "is_safe_haven": false},
+    "kinta_riverfront":       {"name": "Kinta Riverfront Walk",             "x": 75,  "y": 45,  "is_safe_haven": false},
+    "gerbang_malam":          {"name": "Gerbang Malam Night Market",        "x": 100, "y": 10,  "is_safe_haven": false},
+    "yau_tet_shin":           {"name": "Yau Tet Shin Food District",        "x": 110, "y": 35,  "is_safe_haven": false},
+    "greentown_center":       {"name": "Greentown Business Centre",         "x": 150, "y": 30,  "is_safe_haven": false},
+    "hospital_bainun":        {"name": "Hospital Raja Permaisuri Bainun",   "x": 140, "y": 70,  "is_safe_haven": true}
+  },
+  "edges": [
+    {
+      "from": "ipoh_railway_station",
+      "to": "birch_clock_tower",
+      "distance_meters": 300,
+      "safety_score": 85.0,
+      "lighting_level": 4,
+      "has_cctv": true,
+      "wheelchair_accessible": true,
+      "surface": "paved"
+    },
+    {
+      "from": "ipoh_railway_station",
+      "to": "central_police_station",
+      "distance_meters": 450,
+      "safety_score": 95.0,
+      "lighting_level": 5,
+      "has_cctv": true,
+      "wheelchair_accessible": true,
+      "surface": "paved"
+    },
+    {
+      "from": "birch_clock_tower",
+      "to": "concubine_lane",
+      "distance_meters": 280,
+      "safety_score": 75.0,
+      "lighting_level": 3,
+      "has_cctv": true,
+      "wheelchair_accessible": true,
+      "surface": "cobblestone"
+    },
+    {
+      "from": "birch_clock_tower",
+      "to": "padang_ipoh",
+      "distance_meters": 320,
+      "safety_score": 80.0,
+      "lighting_level": 4,
+      "has_cctv": false,
+      "wheelchair_accessible": true,
+      "surface": "paved"
+    },
+    {
+      "from": "central_police_station",
+      "to": "concubine_lane",
+      "distance_meters": 400,
+      "safety_score": 90.0,
+      "lighting_level": 5,
+      "has_cctv": true,
+      "wheelchair_accessible": true,
+      "surface": "paved"
+    },
+    {
+      "from": "padang_ipoh",
+      "to": "kinta_riverfront",
+      "distance_meters": 420,
+      "safety_score": 60.0,
+      "lighting_level": 2,
+      "has_cctv": false,
+      "wheelchair_accessible": true,
+      "surface": "paved"
+    },
+    {
+      "from": "concubine_lane",
+      "to": "kinta_riverfront",
+      "distance_meters": 350,
+      "safety_score": 65.0,
+      "lighting_level": 2,
+      "has_cctv": false,
+      "wheelchair_accessible": false,
+      "surface": "brick_walkway"
+    },
+    {
+      "from": "concubine_lane",
+      "to": "gerbang_malam",
+      "distance_meters": 600,
+      "safety_score": 88.0,
+      "lighting_level": 5,
+      "has_cctv": true,
+      "wheelchair_accessible": true,
+      "surface": "paved"
+    },
+    {
+      "from": "kinta_riverfront",
+      "to": "yau_tet_shin",
+      "distance_meters": 480,
+      "safety_score": 70.0,
+      "lighting_level": 3,
+      "has_cctv": false,
+      "wheelchair_accessible": true,
+      "surface": "paved"
+    },
+    {
+      "from": "gerbang_malam",
+      "to": "yau_tet_shin",
+      "distance_meters": 250,
+      "safety_score": 92.0,
+      "lighting_level": 5,
+      "has_cctv": true,
+      "wheelchair_accessible": true,
+      "surface": "paved"
+    },
+    {
+      "from": "yau_tet_shin",
+      "to": "greentown_center",
+      "distance_meters": 850,
+      "safety_score": 82.0,
+      "lighting_level": 4,
+      "has_cctv": true,
+      "wheelchair_accessible": true,
+      "surface": "paved"
+    },
+    {
+      "from": "kinta_riverfront",
+      "to": "hospital_bainun",
+      "distance_meters": 900,
+      "safety_score": 78.0,
+      "lighting_level": 3,
+      "has_cctv": true,
+      "wheelchair_accessible": true,
+      "surface": "paved"
+    },
+    {
+      "from": "greentown_center",
+      "to": "hospital_bainun",
+      "distance_meters": 500,
+      "safety_score": 90.0,
+      "lighting_level": 5,
+      "has_cctv": true,
+      "wheelchair_accessible": true,
+      "surface": "paved"
+    }
+  ]
+}

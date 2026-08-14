@@ -1,33 +1,51 @@
+
 # Results
 
-Store sample outputs, figures, metrics and test evidence here.
+### Node Alias Legend
 
-=== Scenario 1: Small grid (isolated shortcut vs lit loop) ===
-Baseline (shortest path):
-  Path: A -> B -> C
-  Distance: 200.0 m | Risk score: 1.68 | Nodes expanded: 3
+> `A`: Ipoh Railway Station | `B`: Birch Clock Tower | `C`: Central Police Station | `D`: Concubine Lane | `E`: Padang Ipoh | `F`: Kinta Riverfront | `G`: Gerbang Malam | `H`: Yau Tet Shin | `I`: Greentown Center | `J`: Hospital Bainun
 
-Safety-optimized:
-  Path: A -> D -> E -> F -> C
-  Distance: 400.0 m | Risk score: 0.64 | Nodes expanded: 6
-  --> Extra distance: 200.0 m | Risk reduced by: 1.04
+---
 
-=== Scenario 2: Dense network with risky shortcut ===
-Baseline (shortest path):
-  Path: A -> B -> C -> D
-  Distance: 270.0 m | Risk score: 1.82 | Nodes expanded: 4
+### === Scenario 1: Ipoh Railway Station (A) to Hospital Bainun (J) ===
 
-Safety-optimized:
-  Path: A -> E -> F -> G -> D
-  Distance: 470.0 m | Risk score: 0.74 | Nodes expanded: 7
-  --> Extra distance: 200.0 m | Risk reduced by: 1.08
+**Baseline (shortest path):**
 
-=== Scenario 3: Campus commute (dark shortcut vs lit main road) ===
-Baseline (shortest path):
-  Path: A -> F -> G -> H -> E
-  Distance: 240.0 m | Risk score: 3.06 | Nodes expanded: 6
-  
-Safety-optimized:
-  Path: A -> B -> C -> D -> E
-  Distance: 280.0 m | Risk score: 1.66 | Nodes expanded: 7
-  --> Extra distance: 40.0 m | Risk reduced by: 1.40
+* **Path:** `A -> B -> D -> F -> J`
+* **Metrics:** Distance: 1830.0 m | Risk score: 1.93 | Nodes expanded: 9
+
+**Safety-optimized:**
+
+* **Path:** `A -> C -> D -> F -> J`
+* **Metrics:** Distance: 2100.0 m | Risk score: 1.68 | Nodes expanded: 10
+* **Trade-off:** Extra distance: +270.0 m | Risk reduced by: -0.25
+
+---
+
+### === Scenario 2: Ipoh Railway Station (A) to Yau Tet Shin District (H) ===
+
+**Baseline (shortest path):**
+
+* **Path:** `A -> B -> D -> F -> H`
+* **Metrics:** Distance: 1410.0 m | Risk score: 2.10 | Nodes expanded: 8
+
+**Safety-optimized:**
+
+* **Path:** `A -> C -> D -> G -> H`
+* **Metrics:** Distance: 1700.0 m | Risk score: 1.18 | Nodes expanded: 8
+* **Trade-off:** Extra distance: +290.0 m | Risk reduced by: -0.92
+
+---
+
+### === Scenario 3: Birch Clock Tower (B) to Greentown Business Centre (I) ===
+
+**Baseline (shortest path):**
+
+* **Path:** `B -> D -> F -> H -> I`
+* **Metrics:** Distance: 1960.0 m | Risk score: 1.95 | Nodes expanded: 10
+
+**Safety-optimized:**
+
+* **Path:** `B -> D -> G -> H -> I`
+* **Metrics:** Distance: 1980.0 m | Risk score: 1.46 | Nodes expanded: 9
+* **Trade-off:** Extra distance: +20.0 m | Risk reduced by: -0.49
