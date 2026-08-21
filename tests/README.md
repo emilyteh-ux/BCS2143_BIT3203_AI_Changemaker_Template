@@ -1,4 +1,3 @@
-
 # Tests
 
 The test suite validates data preprocessing, pathfinding search algorithms, and CSP constraint handling. Tests are executed using Python's built-in `unittest` framework.
